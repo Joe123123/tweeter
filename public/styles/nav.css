@@ -1,0 +1,37 @@
+nav {
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  color: #ffffff;
+  z-index: 10;
+}
+
+nav span:first-child {
+  font-family: "Bungee";
+  font-size: 40px;
+  line-height: 120px;
+  padding: 1.5rem;
+}
+
+nav span:last-child {
+  font-family: "Source Sans Pro", "sans-serif";
+  padding: 1.5rem;
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+
+#btn-header {
+  position: absolute;
+  right: 90px;
+  top: 50px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #6e0505;
+}
+#btn-header:hover {
+  cursor: pointer;
+}
