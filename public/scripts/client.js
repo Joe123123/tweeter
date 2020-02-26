@@ -92,7 +92,7 @@ $(document).ready(function() {
       $.ajax("/tweets", {
         method: "POST",
         data: str
-      }) // refresh page and hide warning
+      }) // display all tweets and hide warning
         .then(() => {
           $(".all-tweets").load("/tweets .all-tweets", function(res) {
             const $tweet = createTweetElement(JSON.parse(res));
