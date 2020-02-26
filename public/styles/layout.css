@@ -33,3 +33,30 @@ main {
   position: relative;
   top: 140px;
 }
+
+@media (max-width: 768px) {
+  main {
+    width: 692px;
+  }
+  header {
+    width: 768px;
+  }
+  nav {
+    width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    position: absolute;
+    top: 17%;
+    right: 0;
+    width: 66%;
+    margin: auto 20px;
+  }
+  header {
+    position: fixed;
+    top: 30%;
+    width: 30%;
+    margin: auto 10px;
+  }
+}

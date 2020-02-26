@@ -1,8 +1,12 @@
+.show {
+  display: block !important;
+}
+
 #btn-scroll-top {
   position: fixed;
   display: none;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   width: 40px;
   height: 40px;
   border-radius: 40px;
@@ -16,8 +20,4 @@
 #btn-scroll-top:hover {
   cursor: pointer;
   background-color: red;
-}
-
-.show {
-  display: block !important;
 }
