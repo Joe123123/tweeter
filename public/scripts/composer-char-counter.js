@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("textarea.tweetText").on("input", function() {
-    let num = 140 - this.value.length;
+    let num = 140 - $(this).val().length;
     let $counter = $(this)
       .next()
       .children(".counter");
