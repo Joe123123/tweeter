@@ -25,9 +25,9 @@ $(document).ready(function() {
 
   $(document).scroll(function() {
     if ($(this).scrollTop() > 500) {
-      $scrollUpButton.addClass("show");
+      $scrollUpButton.show();
     } else {
-      $scrollUpButton.removeClass("show");
+      $scrollUpButton.hide();
     }
   });
 
