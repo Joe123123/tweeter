@@ -14,6 +14,7 @@ $(document).ready(function() {
       }
     );
   };
+  // loop the btn-header
   upDownLoop();
   headerButton.click(function() {
     $(".new-tweet").slideToggle("slow");
