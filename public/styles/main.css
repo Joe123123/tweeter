@@ -1,0 +1,23 @@
+#btn-scroll-top {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  background: url("https://img.icons8.com/windows/32/000000/chevron-up.png")
+    no-repeat center orangered;
+  z-index: 10;
+}
+
+#btn-scroll-top:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+.show {
+  display: block !important;
+}
