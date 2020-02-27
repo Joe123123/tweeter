@@ -36,6 +36,12 @@
     border: none;
     &:hover {
       cursor: pointer;
+      box-shadow: 4px 4px 0 0 black;
+    }
+    &.pressed {
+      cursor: pointer;
+      padding: 2px 5px 1px 9px;
+      box-shadow: inset 4px 4px 0 0 black;
     }
   }
   .warning-container {
