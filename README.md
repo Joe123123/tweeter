@@ -12,7 +12,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ### small screen
 
-!["small screen layout"]()
+!["small screen layout"](https://github.com/Joe123123/tweeter/blob/master/public/images/small-size-screen.gif)
 
 ## Getting Started
 
