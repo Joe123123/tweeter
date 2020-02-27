@@ -12,4 +12,16 @@ $(document).ready(function() {
       $counter.removeClass("red-text");
     }
   });
+
+  $("textarea.tweetText").keydown(function(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+    }
+  });
+
+  $("textarea.tweetText").keyup(function(e) {
+    if (e.keyCode === 13) {
+      $("#form-new-tweet").submit();
+    }
+  });
 });
