@@ -17,6 +17,9 @@
       right: 30px;
       color: grey;
     }
+    &:hover .icons {
+      display: block;
+    }
   }
   .tweets-header {
     width: 100%;
@@ -55,6 +58,7 @@
     }
     .icons {
       position: absolute;
+      display: none;
       right: 5px;
       top: 15px;
       a {
