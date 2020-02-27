@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -16,6 +15,7 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -26,6 +26,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 main {
   width: 90%;
   margin: 0 auto;
@@ -33,20 +34,21 @@ main {
   top: 140px;
 }
 
-@media (max-width: 768px) {
+$min-size: 768px;
+$max-size: 1024px;
+
+@media (max-width: $min-size) {
   main {
-    width: 691.2px;
+    width: $min-size * 0.9;
   }
-
   header {
-    width: 768px;
+    width: $min-size;
   }
-
   nav {
-    width: 768px;
+    width: $min-size;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: $max-size) {
   main {
     position: absolute;
     top: 17%;
@@ -54,7 +56,6 @@ main {
     width: 66%;
     margin: auto 20px;
   }
-
   header {
     position: fixed;
     top: 30%;
@@ -62,5 +63,3 @@ main {
     margin: auto 10px;
   }
 }
-
-/*# sourceMappingURL=layout.css.map */

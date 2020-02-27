@@ -6,15 +6,13 @@ header {
   padding-top: 250px;
   background-color: #cc8800;
   background-image: url(http://www.transparenttextures.com/patterns/white-wall-3.png);
+  div {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-128px);
+  }
+  h2 {
+    text-align: center;
+  }
 }
-header div {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-128px);
-}
-header h2 {
-  text-align: center;
-}
-
-/*# sourceMappingURL=header.css.map */

@@ -7,14 +7,12 @@ nav {
   color: #ffffff;
   z-index: 10;
 }
-
 nav span:first-child {
   font-family: "Bungee";
   font-size: 40px;
   line-height: 120px;
   padding: 1.5rem;
 }
-
 nav span:last-child {
   font-family: "Source Sans Pro", "sans-serif";
   padding: 1.5rem;
@@ -35,3 +33,5 @@ nav span:last-child {
 #btn-header:hover {
   cursor: pointer;
 }
+
+/*# sourceMappingURL=nav.css.map */

@@ -8,12 +8,12 @@
   border-radius: 40px;
   border: none;
   outline: none;
-  background: url("https://img.icons8.com/windows/32/000000/chevron-up.png")
-    no-repeat center orangered;
+  background: url("https://img.icons8.com/windows/32/000000/chevron-up.png") no-repeat center orangered;
   z-index: 10;
 }
-
 #btn-scroll-top:hover {
   cursor: pointer;
   background-color: red;
 }
+
+/*# sourceMappingURL=main.css.map */

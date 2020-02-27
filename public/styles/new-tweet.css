@@ -1,11 +1,9 @@
 .new-tweet {
   display: none;
 }
-
 .new-tweet form {
   width: 100%;
 }
-
 .new-tweet textarea {
   width: 100%;
   height: 70px;
@@ -15,25 +13,20 @@
   resize: none;
   outline: none;
 }
-
 .new-tweet .input-area {
   position: relative;
   margin-top: 6px;
 }
-
 .new-tweet .input-area span {
   position: absolute;
   right: 10px;
 }
-
 .new-tweet .input-area span.orange-text {
   color: orange;
 }
-
 .new-tweet .input-area span.red-text {
   color: red;
 }
-
 .new-tweet input {
   background-color: #4056a1;
   color: #ffffff;
@@ -42,11 +35,9 @@
   outline: none;
   border: none;
 }
-
 .new-tweet input:hover {
   cursor: pointer;
 }
-
 .new-tweet .warning-container {
   display: none;
   margin: 10px 0;
@@ -54,17 +45,16 @@
   height: 55px;
   border: 3px solid red;
 }
-
-.new-tweet .warning {
+.new-tweet .warning-container .warning {
   display: flex;
   align-content: center;
 }
-
-.new-tweet .warning img {
+.new-tweet .warning-container .warning img {
   margin: 0 5px;
 }
-
-.new-tweet .warning span {
+.new-tweet .warning-container .warning span {
   height: 50px;
   line-height: 50px;
 }
+
+/*# sourceMappingURL=new-tweet.css.map */
