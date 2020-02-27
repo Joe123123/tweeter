@@ -33,17 +33,27 @@ main {
   top: 140px;
 }
 
-@media (max-width: 768px) {
-  main {
-    width: 691.2px;
+@media (max-width: 480px) {
+  nav span:first-child {
+    font-family: "Bungee";
+    font-size: 16px;
+  }
+  nav span:last-child {
+    font-family: "Source Sans Pro", "sans-serif";
+    font-size: 20px;
+    right: 0;
+  }
+  nav span #btn-header {
+    right: 70px;
   }
 
   header {
-    width: 768px;
+    width: 100%;
   }
 
-  nav {
-    width: 768px;
+  main {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 1024px) {
@@ -53,6 +63,9 @@ main {
     right: 0;
     width: 66%;
     margin: auto 20px;
+  }
+  main .all-tweets .tweet-item {
+    height: 230px;
   }
 
   header {

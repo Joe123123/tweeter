@@ -96,9 +96,7 @@ $(document).ready(function() {
       $(".new-tweet .warning-container").slideDown("fast");
       $("textarea.tweetText").focus();
     } else if (text.length > 140) {
-      $(".new-tweet .warning span").text(
-        "Too long. Plz enter below 140 letters."
-      );
+      $(".new-tweet .warning span").text("Plz enter below 140 letters.");
       $(".new-tweet .warning-container").slideUp("fast");
       $(".new-tweet .warning-container").slideDown("fast");
       $(".input-area .counter").addClass("red-text");

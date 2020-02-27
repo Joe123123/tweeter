@@ -34,20 +34,37 @@ main {
   top: 140px;
 }
 
-$min-size: 768px;
+$min-size: 480px;
 $max-size: 1024px;
 
 @media (max-width: $min-size) {
-  main {
-    width: $min-size * 0.9;
-  }
-  header {
-    width: $min-size;
-  }
   nav {
-    width: $min-size;
+    span {
+      &:first-child {
+        font-family: "Bungee";
+        font-size: 16px;
+      }
+      &:last-child {
+        font-family: "Source Sans Pro", "sans-serif";
+        font-size: 20px;
+        right: 0;
+      }
+      #btn-header {
+        right: 70px;
+      }
+    }
+  }
+
+  header {
+    width: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
   }
 }
+
 @media (min-width: $max-size) {
   main {
     position: absolute;
@@ -55,6 +72,11 @@ $max-size: 1024px;
     right: 0;
     width: 66%;
     margin: auto 20px;
+    .all-tweets {
+      .tweet-item {
+        height: 230px;
+      }
+    }
   }
   header {
     position: fixed;
