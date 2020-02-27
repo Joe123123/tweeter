@@ -8,11 +8,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ### full screen
 
-!["full screen layout"](https://github.com/Joe123123/tweeter/blob/master/public/images/full.gif)
+!["full screen layout"](https://github.com/Joe123123/tweeter/blob/master/public/images/full-page.gif)
 
 ### small screen
 
-!["small screen layout"](https://github.com/Joe123123/tweeter/blob/master/public/images/small.gif)
+!["small screen layout"](https://github.com/Joe123123/tweeter/blob/master/public/images/small-page.gif)
 
 ## Getting Started
 
