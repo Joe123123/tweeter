@@ -13,6 +13,7 @@ $(document).ready(function() {
     }
   });
 
+  // press key return to submit
   $("textarea.tweetText").keydown(function(e) {
     if (e.keyCode === 13) {
       e.preventDefault();

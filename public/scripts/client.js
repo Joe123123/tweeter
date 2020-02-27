@@ -10,6 +10,8 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+
+  // return time difference string
   const timeDifference = (current, previous) => {
     let msPerMinute = 60 * 1000;
     let msPerHour = msPerMinute * 60;
@@ -60,7 +62,8 @@ $(document).ready(function() {
   };
 
   const loadTweets = () => {
-    $.ajax("/tweets", { method: "GET" }).then(res => {
+    $(".all-tweets").empty();
+    $.ajax("/tweets").then(res => {
       const $tweet = createTweetElement(res);
       $(".all-tweets").append($tweet);
     });
@@ -91,7 +94,6 @@ $(document).ready(function() {
       $(".new-tweet .warning span").text("Can not tweet empty words.");
       $(".new-tweet .warning-container").slideUp();
       $(".new-tweet .warning-container").slideDown();
-      // $(".input-area .counter").addClass("red-text");
     } else if (text.length > 140) {
       $(".new-tweet .warning span").text(
         "Too long. Plz enter below 140 letters."
@@ -101,15 +103,14 @@ $(document).ready(function() {
       $(".input-area .counter").addClass("red-text");
     } else {
       let str = $(this).serialize();
-      $.ajax("/tweets", {
-        method: "POST",
-        data: str
-      }) // display all tweets and hide warning
+      // display all tweets and hide warning
+      $.ajax({ url: "/tweets", method: "POST", data: str })
         .then(() => {
           $(".all-tweets").load("/tweets .all-tweets", function(res) {
             const $tweet = createTweetElement(JSON.parse(res));
             $(".all-tweets").append($tweet);
           });
+          // tried loadTweets() but the rerender changes the position of page
           $(".new-tweet textarea").val("");
           $(".new-tweet .counter").text(140);
           $(".new-tweet .warning-container").slideUp();
