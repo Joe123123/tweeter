@@ -69,6 +69,18 @@ $(document).ready(function() {
   // call loadTweets to display all tweets
   loadTweets();
 
+  $(".new-tweet input").mousedown(function() {
+    $(this).addClass("pressed");
+  });
+
+  $(".new-tweet input").mouseleave(function() {
+    $(this).removeClass("pressed");
+  });
+
+  $(".new-tweet input").mouseup(function() {
+    $(this).removeClass("pressed");
+  });
+
   $("#form-new-tweet").submit(function(e) {
     e.preventDefault();
     let text = $(this)
@@ -79,7 +91,7 @@ $(document).ready(function() {
       $(".new-tweet .warning span").text("Can not tweet empty words.");
       $(".new-tweet .warning-container").slideUp();
       $(".new-tweet .warning-container").slideDown();
-      $(".input-area .counter").addClass("red-text");
+      // $(".input-area .counter").addClass("red-text");
     } else if (text.length > 140) {
       $(".new-tweet .warning span").text(
         "Too long. Plz enter below 140 letters."
