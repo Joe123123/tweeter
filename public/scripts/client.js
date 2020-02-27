@@ -92,28 +92,32 @@ $(document).ready(function() {
     // show different warnings or post new tweet
     if (/^\s*$/.test(text)) {
       $(".new-tweet .warning span").text("Can not tweet empty words.");
-      $(".new-tweet .warning-container").slideUp();
-      $(".new-tweet .warning-container").slideDown();
+      $(".new-tweet .warning-container").slideUp("fast");
+      $(".new-tweet .warning-container").slideDown("fast");
+      $("textarea.tweetText").focus();
     } else if (text.length > 140) {
       $(".new-tweet .warning span").text(
         "Too long. Plz enter below 140 letters."
       );
-      $(".new-tweet .warning-container").slideUp();
-      $(".new-tweet .warning-container").slideDown();
+      $(".new-tweet .warning-container").slideUp("fast");
+      $(".new-tweet .warning-container").slideDown("fast");
       $(".input-area .counter").addClass("red-text");
+      $("textarea.tweetText").focus();
     } else {
       let str = $(this).serialize();
       // display all tweets and hide warning
       $.ajax({ url: "/tweets", method: "POST", data: str })
         .then(() => {
+          // tried loadTweets() but the rerender changes the position of page
           $(".all-tweets").load("/tweets .all-tweets", function(res) {
             const $tweet = createTweetElement(JSON.parse(res));
             $(".all-tweets").append($tweet);
           });
-          // tried loadTweets() but the rerender changes the position of page
+          // reset the form after submission
           $(".new-tweet textarea").val("");
+          $(".new-tweet input").blur();
           $(".new-tweet .counter").text(140);
-          $(".new-tweet .warning-container").slideUp();
+          $(".new-tweet .warning-container").slideUp("fast");
           $(".input-area .counter").removeClass("red-text");
         })
         .catch(err => {

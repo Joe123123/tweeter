@@ -15,14 +15,18 @@ $(document).ready(function() {
 
   // press key return to submit
   $("textarea.tweetText").keydown(function(e) {
-    if (e.keyCode === 13) {
+    if (e.keyCode === 13 && !e.shiftKey) {
       e.preventDefault();
+      $(".new-tweet input").addClass("pressed");
     }
   });
 
   $("textarea.tweetText").keyup(function(e) {
-    if (e.keyCode === 13) {
+    if (e.keyCode === 13 && !e.shiftKey) {
       $("#form-new-tweet").submit();
+      $(".new-tweet input").removeClass("pressed");
+      // blur the form after submission
+      $(this).blur();
     }
   });
 });
