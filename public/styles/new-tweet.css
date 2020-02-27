@@ -19,6 +19,7 @@
 }
 .new-tweet .input-area span {
   position: absolute;
+  font-family: "Bungee";
   right: 10px;
 }
 .new-tweet .input-area span.orange-text {
