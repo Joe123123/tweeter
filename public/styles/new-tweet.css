@@ -28,7 +28,7 @@
 .new-tweet .input-area span.red-text {
   color: red;
 }
-.new-tweet input {
+.new-tweet .input-area input {
   background-color: #4056a1;
   color: #ffffff;
   font-family: "Bungee";
@@ -36,13 +36,13 @@
   outline: none;
   border: none;
 }
-.new-tweet input:hover {
+.new-tweet .input-area input:hover {
   cursor: pointer;
   box-shadow: 4px 4px 0 0 black;
 }
-.new-tweet input.pressed {
+.new-tweet .input-area input.pressed {
   cursor: pointer;
-  padding: 2px 5px 1px 9px;
+  padding: 3px 5px 1px 9px;
   box-shadow: inset 4px 4px 0 0 black;
 }
 .new-tweet .warning-container {

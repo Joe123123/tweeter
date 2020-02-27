@@ -26,22 +26,22 @@
         color: red;
       }
     }
-  }
-  input {
-    background-color: #4056a1;
-    color: #ffffff;
-    font-family: "Bungee";
-    box-shadow: 2px 2px 0 0 gray;
-    outline: none;
-    border: none;
-    &:hover {
-      cursor: pointer;
-      box-shadow: 4px 4px 0 0 black;
-    }
-    &.pressed {
-      cursor: pointer;
-      padding: 2px 5px 1px 9px;
-      box-shadow: inset 4px 4px 0 0 black;
+    input {
+      background-color: #4056a1;
+      color: #ffffff;
+      font-family: "Bungee";
+      box-shadow: 2px 2px 0 0 gray;
+      outline: none;
+      border: none;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 4px 4px 0 0 black;
+      }
+      &.pressed {
+        cursor: pointer;
+        padding: 3px 5px 1px 9px;
+        box-shadow: inset 4px 4px 0 0 black;
+      }
     }
   }
   .warning-container {
