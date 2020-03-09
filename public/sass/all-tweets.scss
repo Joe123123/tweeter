@@ -7,44 +7,53 @@
     height: auto;
     border: 3px solid;
     margin: 50px 0;
+
     &:hover {
       background-color: pink;
       box-shadow: 10px 10px 0px 0px;
     }
+
     &:hover .handle {
       display: block;
       position: absolute;
       right: 30px;
       color: grey;
     }
+
     &:hover .icons {
       display: block;
     }
   }
+
   .tweets-header {
     width: 100%;
     height: 30px;
     margin: 10px;
     position: relative;
   }
+
   .avatar {
     position: absolute;
     width: 50px;
     height: 50px;
     border: 2px solid;
   }
+
   .name {
     position: absolute;
     left: 55px;
     top: 10px;
   }
+
   .handle {
     display: none;
   }
+
   .tweet-text {
     overflow-wrap: break-word;
     margin: 20px;
   }
+
   .tweets-footer {
     position: relative;
     width: 98%;
@@ -56,11 +65,13 @@
       left: 10px;
       top: 10px;
     }
+
     .icons {
       position: absolute;
       display: none;
       right: 5px;
       top: 15px;
+
       a {
         margin: 5px;
       }

@@ -6,6 +6,7 @@ nav {
   background-color: #4056a1;
   color: #ffffff;
   z-index: 10;
+
   span {
     &:first-child {
       font-family: "Bungee";
@@ -13,6 +14,7 @@ nav {
       line-height: 120px;
       padding: 1.5rem;
     }
+
     &:last-child {
       font-family: "Source Sans Pro", "sans-serif";
       padding: 1.5rem;
@@ -31,6 +33,7 @@ nav {
   border: none;
   outline: none;
   color: #6e0505;
+
   &:hover {
     cursor: pointer;
   }
