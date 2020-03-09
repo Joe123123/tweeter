@@ -1,5 +1,7 @@
 $(document).ready(function() {
   $("textarea.tweetText").on("input", function() {
+    // hide the warning once user change input
+    $(".new-tweet .warning-container").slideUp("slow");
     let num = 140 - $(this).val().length;
     let $counter = $(this)
       .next()

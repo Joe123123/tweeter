@@ -5,6 +5,7 @@
  */
 
 $(document).ready(function() {
+  // escape the user input
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -39,9 +40,10 @@ $(document).ready(function() {
   };
 
   const createTweetElement = data => {
+    // the container of all tweets
     const $all = $(".all-tweets");
     for (let item of data) {
-      const { name, avatars, handle } = item["user"];
+      const { name, avatars, handle } = item["user"]; // user info
       const { text } = item["content"];
       const createdDate = item["created_at"];
       const daysStr = timeDifference(Date.now(), createdDate);
@@ -62,7 +64,7 @@ $(document).ready(function() {
   };
 
   const loadTweets = () => {
-    $(".all-tweets").empty();
+    $(".all-tweets").empty(); // empty the container first
     $.ajax("/tweets").then(res => {
       const $tweet = createTweetElement(res);
       $(".all-tweets").append($tweet);
@@ -72,6 +74,7 @@ $(document).ready(function() {
   // call loadTweets to display all tweets
   loadTweets();
 
+  //enter btn animation
   $(".new-tweet input").mousedown(function() {
     $(this).addClass("pressed");
   });
@@ -92,13 +95,11 @@ $(document).ready(function() {
     // show different warnings or post new tweet
     if (/^\s*$/.test(text)) {
       $(".new-tweet .warning span").text("Can not tweet empty words.");
-      $(".new-tweet .warning-container").slideUp("fast");
-      $(".new-tweet .warning-container").slideDown("fast");
+      $(".new-tweet .warning-container").slideDown("slow");
       $("textarea.tweetText").focus();
     } else if (text.length > 140) {
       $(".new-tweet .warning span").text("Plz enter below 140 letters.");
-      $(".new-tweet .warning-container").slideUp("fast");
-      $(".new-tweet .warning-container").slideDown("fast");
+      $(".new-tweet .warning-container").slideDown("slow");
       $(".input-area .counter").addClass("red-text");
       $("textarea.tweetText").focus();
     } else {
@@ -115,7 +116,6 @@ $(document).ready(function() {
           $(".new-tweet textarea").val("");
           $(".new-tweet input").blur();
           $(".new-tweet .counter").text(140);
-          $(".new-tweet .warning-container").slideUp("fast");
           $(".input-area .counter").removeClass("red-text");
         })
         .catch(err => {

@@ -1,5 +1,7 @@
 $(document).ready(function() {
   let headerButton = $("#btn-header");
+
+  // loop the animation of the btn
   const upDownLoop = () => {
     headerButton.animate(
       { top: "55px" },
